@@ -20,3 +20,7 @@ The Sites publishing workflow provisions shared storage and applies the committe
 ## Validation
 
 TypeScript and production build verified. Checked status transitions, stale-update rejection, global rate persistence, invalid inputs, midnight splitting, completed-session averages, active phone totals, and both daylight-saving boundaries. Optional WebMCP registration is feature-detected; no supported agent browser context was available for execution validation.
+
+## Character animations
+
+Four transparent six-frame sprite strips in `public/animations/` animate the chair swivel, walk cycle, phone thinking pose, and typing. Each sheet is 2172×724; a frame is 362×724. The viewport preserves the artwork's aspect ratio. Animations continue smoothly through timer updates and restart on status changes. Pause/resume is local to the browser and never changes the shared tracker. Reduced-motion settings show a still frame. Built-in ImageGen created the frames; exact prompts are in `docs/animation-prompts.txt`.

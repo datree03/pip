@@ -1,0 +1,18 @@
+Built-in image_gen; transparent_background=true; referenced_image_paths=["/Users/tri/Documents/ChatGPT/Time-Tracker/sit-time/public/characters.png"]
+
+Each complete generation prompt is the COMMON text concatenated directly with the status text below.
+
+COMMON:
+Use case: identity-preserve. Asset: production animation sprite sheet. The input image is the reference for the SAME cute anime chibi boy, preserving exact identity and illustration style: fluffy dark navy hair, big dark eyes, warm peach face blush, oversized muted teal sweater, charcoal trousers, off-white sneakers, clean soft painterly anime linework. Create ONE horizontal transparent PNG strip with EXACTLY SIX frames, in ONE ROW, each in an exactly equal SQUARE cell. Canvas aspect ratio EXACTLY 6:1, preferably 3072x512 or 1536x256. Each frame's character and furniture entirely fit inside its invisible square cell with 8% padding. Consistent scale, root center, baseline, proportions and furniture across all six frames. Actual sequential animation drawings, not six unrelated poses. Transparent background and clean alpha; no ground shadow outside sprites, no text, numbers, frame borders, dividers, grid, or watermark. Do not reproduce the reference's 2x2 layout. 
+
+SITTING:
+Seated on a caster swivel OFFICE chair with charcoal upholstered seat/back and metal five-star wheeled base. Both feet together and arms relaxed. Six chronological chair swivel frames: left-facing threequarter; halfway-left; direct front; halfway-right; right-facing threequarter; direct front again. Torso and chair seat turn smoothly around the same fixed vertical center; stable wheel base. Face visible front/threequarter, never rear view. Entire office chair including wheels included.
+
+AWAY:
+In-place WALK CYCLE, facing right in side/threequarter view. EXACTLY six sequential phases: left foot forward/right back, left weight-bearing/right passing, right foot forward/left back, right weight-bearing/left passing, left foot forward transition, return transition to first. Visible alternating leg strides and counter-swinging arms. No mug, furniture or extra props. Same root position and rightward facing direction, never progressively translate across cells; whole body included.
+
+PHONE:
+Seated on a charcoal caster swivel OFFICE chair with upholstered seat/back and metal five-star wheeled base, consistent front/threequarter view all frames. Head tilted DOWN looking at smartphone held in RIGHT hand near lap, LEFT hand resting against cheek in thoughtful cute pose, elbow supported on chair armrest. Six subtle sequential breathing/blink/head nod frames: attentive, slight inhale, blink, slight exhale/head dip, eyes reopen, return attentive. Both DIFFERENT hands clearly assigned: one phone hand, other cheek hand. Chair and legs identical all frames. Whole chair and wheels included.
+
+WORKING:
+Seated on a charcoal caster swivel OFFICE chair at a small warm brown desk with open grey laptop, facing right threequarter, head lowered toward laptop. SIX ACTUAL sequential TYPING phases with noticeable alternation of forearms and hands: left fingers pressing keys/right fingers raised, both transitioning, right fingers pressing/left raised, both lower, left press/right lift, right press/left lift. Small head and shoulder breathing changes. Hands clearly atop the keyboard in each frame, not resting on desk. Same desk, laptop, office chair, camera, scale, root and baseline all six frames. Entire desk, chair including caster wheels and character fit each square cell.
