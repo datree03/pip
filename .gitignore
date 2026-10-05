@@ -44,3 +44,9 @@ next-env.d.ts
 /.codex/
 /outputs/
 /work/
+
+.dev.vars*
+!.env.example
+
+/pages-dist/
+*.tsbuildinfo

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Sit Time — Shared Time Tracker",
-  description: "Track away, phone and working time together, with daily totals and away cost.",
+  title: "P.I.P",
+  description: "Track away, phone and working time together, with daily totals and away and phone costs.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

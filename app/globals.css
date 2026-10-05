@@ -22,3 +22,40 @@
 @keyframes walk-bounce{0%,100%{transform:translateY(0);}50%{transform:translateY(-2px);}}
 @keyframes phone-breathe{0%,100%{transform:scaleY(1);}50%{transform:scaleY(1.012);}}
 @media(prefers-reduced-motion:reduce){.animated-character,.character-sheet{animation:none!important;transform:none!important;}.animation-toggle{display:none;}}
+/* Cost is the primary financial result, with space to stay readable. */
+.stat-footer{flex-wrap:wrap;gap:14px;align-items:flex-end;}
+.stat-footer>div:last-child{flex:1;min-width:120px;}
+.stat-footer .cost-value{font-size:30px;line-height:1.2;font-weight:750;letter-spacing:-.6px;overflow-wrap:anywhere;}
+.calendar-detail{grid-template-columns:1.2fr 1fr 1fr;}
+.idle-note{font-size:12px;color:#71848b;margin:14px 0 0;}
+.access-page{min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 20px;gap:28px;}
+.access-card{width:100%;max-width:400px;background:white;border:1px solid var(--border);border-radius:22px;padding:34px;box-shadow:0 16px 50px #18333a08;}
+.access-lock{width:58px;height:58px;display:grid;place-items:center;color:#087e82;background:#e2f1ed;border-radius:18px;margin-bottom:24px;}
+.access-card h1{font-size:30px;margin:12px 0 8px;}
+.access-card>p{font-size:16px;color:#637980;margin:0 0 25px;}
+.access-card label{display:block;font-size:14px;font-weight:600;margin-bottom:8px;}
+.access-card input{height:46px;font-size:17px;}
+.access-card button{width:100%;height:45px;margin-top:18px;font-size:15px;}
+.access-error{color:#a23828;font-size:14px;line-height:1.5;margin:12px 0 0;}
+.access-footnote{font-size:13px;color:#829499;}
+@media(max-width:650px){.stat-card{display:block;}.stat-card>strong{margin-top:10px;}.stat-footer{border-top:1px solid #ecf0f2;flex-direction:row;align-items:flex-end;margin-top:14px;padding-top:12px;}.stat-footer>div{display:block;}.stat-footer>div:last-child{text-align:right;}.stat-footer .cost-value{font-size:32px;margin-top:5px;}.access-card{padding:27px;}}
+.activity-stat{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:17px;padding-bottom:16px;border-bottom:1px solid #e8eef0;}
+.activity-stat-label{display:flex;align-items:center;gap:7px;font-size:14px;color:#637980;}
+.activity-stat strong{display:block;font-size:26px;line-height:1.25;letter-spacing:-.5px;margin-top:7px;}
+.activity-stat small{display:block;font-size:12px;color:#71848b;margin-top:5px;}
+.activity-stat small b{font-weight:600;color:#49636a;margin-left:4px;}
+.activity-cost{text-align:right;min-width:100px;}
+.activity-cost>b{display:block;font-size:26px;font-weight:700;line-height:1.2;color:#087e82;overflow-wrap:anywhere;}
+.activity-cost>span{font-size:12px;color:#71848b;display:block;margin-top:5px;}
+.combined-cost{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:17px;}
+.combined-cost>span{font-size:13px;color:#637980;}
+.combined-cost strong{font-size:34px;font-weight:750;letter-spacing:-1px;line-height:1.2;color:#087e82;overflow-wrap:anywhere;}
+.calendar-detail{grid-template-columns:1.2fr repeat(3,1fr);}
+.transitioning{animation:none;}
+.character-sheet.transition-sheet{animation:transition-frames var(--sprite-duration) steps(5,end) 1 both;}
+.sprite-reveal{animation:sprite-reveal .22s ease-out both;}
+.scene-caption{text-align:center;max-width:260px;min-height:18px;}
+@keyframes transition-frames{to{transform:translateX(-83.333333%);}}
+@keyframes sprite-reveal{from{opacity:0;}to{opacity:1;}}
+@media(prefers-reduced-motion:reduce){.sprite-reveal{animation:none!important;}}
+@media(max-width:650px){.stat-card{display:block;}.activity-stat{margin-top:15px;}.activity-stat strong{font-size:26px;}.combined-cost strong{font-size:34px;}}

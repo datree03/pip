@@ -1,0 +1,5 @@
+import {env} from 'cloudflare:workers';
+export function originAllowed(request:Request){const origin=request.headers.get('origin');if(!origin)return true;const remote=(env as unknown as Record<string,string|undefined>).ACCESS_ALLOWED_ORIGIN;return origin===new URL(request.url).origin||(remote?.split(',').map(value=>value.trim()).includes(origin)??false);}
+export function responseHeaders(request:Request,extra?:HeadersInit){const headers=new Headers(extra);headers.set('Cache-Control','no-store');const origin=request.headers.get('origin');if(origin&&originAllowed(request)){headers.set('Access-Control-Allow-Origin',origin);headers.set('Vary','Origin');headers.set('Access-Control-Allow-Headers','Content-Type, Authorization, X-PIP-Attempt');headers.set('Access-Control-Allow-Methods','GET, POST, OPTIONS');}return headers;}
+export function json(request:Request,data:unknown,status=200,extra?:HeadersInit){return Response.json(data,{status,headers:responseHeaders(request,extra)});}
+export function preflight(request:Request){return new Response(null,{status:originAllowed(request)?204:403,headers:responseHeaders(request)});}
