@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "P.I.P",
-  description: "Track away, phone and working time together, with daily totals and away and phone costs.",
+  description: "Your chair called. Track Away and Phone time, calendar receipts, and the break bill.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

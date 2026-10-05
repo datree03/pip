@@ -8,7 +8,7 @@ export async function GET(request:Request){
  if(!originAllowed(request))return json(request,{error:'Access denied.'},403);
  if(!await allowed(request))return json(request,{error:'Enter the password to access the tracker.'},401);
  const db=getDb();
- await db.prepare("INSERT OR IGNORE INTO tracker (id,status,started_at,revision,hourly_rate_cents) VALUES (1,'working',?,0,2500)").bind(Date.now()).run();
+ await db.prepare("INSERT OR IGNORE INTO tracker (id,status,started_at,revision,hourly_rate_cents) VALUES (1,'working',?,0,5000)").bind(Date.now()).run();
  await db.prepare("UPDATE tracker SET status='working',revision=revision+1 WHERE id=1 AND status='sitting'").run();
  const results=await db.batch([db.prepare('SELECT status, started_at AS startedAt, revision, hourly_rate_cents AS hourlyRate FROM tracker WHERE id=1'),db.prepare("SELECT id,status,start,end FROM sessions WHERE status IN ('away','phone') ORDER BY start DESC")]);
  return json(request,{state:results[0].results[0],sessions:results[1].results,serverNow:Date.now()});

@@ -4,10 +4,10 @@ A small shared Away and Phone tracker, with cute anime animations, a daily calen
 
 - **Working is the default when Sitting down is selected.** Idle and Working time never count toward totals or cost.
 - **Away and Phone start a session.** Returning to Working closes it. Sessions persist on the shared server and synchronize every five seconds.
-- **Both Away and Phone cost money** at the global hourly rate. Today/week/month cards show separate totals, averages, costs, and a combined cost.
+- **Both Away and Phone cost money** at the global hourly rate (default $50/hour). Today/week/month cards show separate totals, averages, costs, and a combined cost.
 - Pacific time (`America/Los_Angeles`), Monday-start weeks, and correct splits at local midnight and daylight-saving changes.
 - The first password submission per browser is rejected, regardless of its value. Subsequent submissions are checked on the server.
-- Status animations include walking to the desk and sitting down, getting up and leaving, picking up the phone, and returning to typing. Pause/resume and reduced-motion settings are supported.
+- Status animations include walking to the desk and sitting down, getting up and leaving directly from either Working or Phone, picking up the phone, and returning to typing. Pause/resume and reduced-motion settings are supported.
 
 ## Hosting
 
@@ -27,4 +27,4 @@ Pushes to `main` run `.github/workflows/pages.yml`. Publishing the server uses t
 
 ## Artwork
 
-Built-in ImageGen produced `public/animations/{sitting,away,phone,working}.png` and `public/transitions/{arrive,leave,pick-phone,resume-work}.png`. Each transparent sheet is one row of six frames, 2172×724 pixels. Exact prompts are in `docs/animation-prompts.txt` and `docs/transition-prompts.txt`. Sprite viewports preserve the artwork's aspect ratio. Transition assets load before playback; rapid status changes cancel outdated sequences.
+Built-in ImageGen produced `public/animations/{sitting,away,phone,working}.png` and `public/transitions/{arrive,leave,phone-leave,pick-phone,resume-work}.png`. Each transparent sheet is one row of six frames, 2172×724 pixels. Exact prompts are in `docs/animation-prompts.txt` and `docs/transition-prompts.txt`. Sprite viewports preserve the artwork's aspect ratio. Transition assets load before playback; rapid status changes cancel outdated sequences.
