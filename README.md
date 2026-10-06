@@ -4,6 +4,7 @@ A small shared Away and Phone tracker, with cute anime animations, a daily calen
 
 - **Working is the default when Sitting down is selected.** Idle and Working time never count toward totals or cost.
 - **Away and Phone start a session.** Returning to Working closes it. Sessions persist on the shared server and synchronize every five seconds.
+- **Daily chair curfew:** from 5:30 PM to 9:00 AM Pacific, status is Sitting down / Working and Away/Phone are unavailable. A forgotten session closes at its first 5:30 PM boundary, even if every browser is closed. The server reconciles the stored state on the next request; the client clips time immediately at the boundary. Tracking stays Working at 9:00 AM until someone changes it. DST is handled in Pacific time.
 - **Both Away and Phone cost money** at the global hourly rate (default $50/hour). Today/week/month cards show separate totals, averages, costs, and a combined cost.
 - Pacific time (`America/Los_Angeles`), Monday-start weeks, and correct splits at local midnight and daylight-saving changes.
 - The first password submission per browser is rejected, regardless of its value. Subsequent submissions are checked on the server.

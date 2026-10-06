@@ -59,3 +59,5 @@
 @keyframes sprite-reveal{from{opacity:0;}to{opacity:1;}}
 @media(prefers-reduced-motion:reduce){.sprite-reveal{animation:none!important;}}
 @media(max-width:650px){.stat-card{display:block;}.activity-stat{margin-top:15px;}.activity-stat strong{font-size:26px;}.combined-cost strong{font-size:34px;}}
+
+.hours-note { margin: 12px 0 28px; color: #52676d; font-size: 13px; line-height: 1.6; }
