@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": ">=22.13.0"
+    "node": "^22.23.4 || ^24.22.1 || ^26.12.1"
   },
   "scripts": {
     "install:ci": "node scripts/install-ci.mjs",
@@ -14,7 +14,14 @@
     "db:generate": "drizzle-kit generate",
     "build:pages": "vite build --config vite.pages.config.ts",
     "preview:pages": "vite preview --config vite.pages.config.ts",
-    "test:hours": "node tests/business-hours.mjs"
+    "test:hours": "node tests/business-hours.mjs",
+    "check:runtime": "node scripts/check-node.mjs",
+    "preinstall": "node scripts/check-node.mjs",
+    "predev": "node scripts/check-node.mjs",
+    "prebuild": "node scripts/check-node.mjs",
+    "prebuild:pages": "node scripts/check-node.mjs",
+    "prestart": "node scripts/check-node.mjs",
+    "pretest:hours": "node scripts/check-node.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

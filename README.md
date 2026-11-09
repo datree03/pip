@@ -18,7 +18,7 @@ No password or server secret is shipped to GitHub Pages. The Pages interface use
 
 ## Development
 
-Install with `npm run install:ci`. Configure local secret keys listed in `.env.example`, using `.dev.vars` for Worker preview. Password hashes use PBKDF2 SHA-256 with 100,000 iterations, a random salt, and 32 output bytes. Keep matching secrets in Sites runtime settings, never source control.
+Use the patched Node.js release in `.nvmrc` (`nvm install && nvm use`), then install with `npm run install:ci`. Supported runtime floors are Node 22.23.4, 24.22.1, and 26.12.1 on their respective release lines. Installation and app commands reject unsupported Node releases and known affected Brotli versions. GitHub builds use `.nvmrc` and validate the actual runtime before installing dependencies. Configure local secret keys listed in `.env.example`, using `.dev.vars` for Worker preview. Password hashes use PBKDF2 SHA-256 with 100,000 iterations, a random salt, and 32 output bytes. Keep matching secrets in Sites runtime settings, never source control.
 
 For the full app: generate schema changes with `npm run db:generate`, build with `npm run build`, apply pending Drizzle migrations to local D1 using the generated `dist/server/wrangler.json` and `.wrangler/state`, then run `npm run dev`.
 
